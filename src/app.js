@@ -20,7 +20,7 @@ app.use(morgan('common'));
 app.use(helment());
 app.use(cors());
 
-mongoose.connect("mongodb+srv://Philane14:Philane14!@msibi-uuurd.mongodb.net/test?retryWrites=true&w=majority", 
+mongoose.connect("mongodb+srv://Philane14:Philane14@msibi-uuurd.mongodb.net/test?retryWrites=true&w=majority", 
 { useNewUrlParser:true, useUnifiedTopology: true } ,
  (err) => {
      if (err) {
