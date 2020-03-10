@@ -23,7 +23,10 @@ app.use(cors());
 mongoose.connect("mongodb+srv://Philane14:Philane14!@msibi-uuurd.mongodb.net/test?retryWrites=true&w=majority", 
 { useNewUrlParser:true, useUnifiedTopology: true } ,
  (err) => {
-     if (err) return res.status(400).json({status: 'Error', message: err});
+     if (err) {
+        console.log(err);
+        return;
+     }
     console.log("Connected to DB");
 });
 
