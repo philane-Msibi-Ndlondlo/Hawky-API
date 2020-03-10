@@ -852,7 +852,7 @@ class SummaryComponent {
         this.time.getTimetable(this.user.email).subscribe(timetable => {
             this.timetable = timetable.message;
             this.timetable.forEach((timeRow, i) => {
-                this.timetablepdf.push({ days: i + 1, attendance: 'Yes', internsignature: 'Signed', timein: timeRow.timeIn, timeout: timeRow.timeOut });
+                this.timetablepdf.push({ days: timeRow.dayDate, attendance: 'Yes', internsignature: 'Signed', timein: timeRow.timeIn, timeout: timeRow.timeOut });
             });
             console.log('this.timetable', this.timetablepdf);
         });

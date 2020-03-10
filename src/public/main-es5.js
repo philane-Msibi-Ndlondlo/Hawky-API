@@ -2272,7 +2272,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             _this8.timetable.forEach(function (timeRow, i) {
               _this8.timetablepdf.push({
-                days: i + 1,
+                days: timeRow.dayDate,
                 attendance: 'Yes',
                 internsignature: 'Signed',
                 timein: timeRow.timeIn,
