@@ -70,7 +70,7 @@ router.post('/isTimeOut', async (req, res) => {
     try {
         const timeout = await Timetable.findOne({dayDate: req.body.dayDate, email: req.body.email});
         console.log('istimeout', timeout);
-        if (timeout.timeOut) {
+        if (timeout.timeOut && timeout.timeOut !=='-') {
             return res.json({status: 'Success', message: 'Yes'});
         }
 
