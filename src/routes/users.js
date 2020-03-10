@@ -10,6 +10,8 @@ const { validateUserLogin, validateUserRegister } = require("../models/validater
 
 
 router.post('/login', async (req, res) => {
+    console.log(req.body);
+    
     const { error } = validateUserLogin(req.body);
 
     try {
